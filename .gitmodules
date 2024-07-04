@@ -1,0 +1,6 @@
+[submodule "nestjs-inviteme"]
+	path = nestjs-inviteme
+	url = https://github.com/valmojr/nestjs-inviteme.git
+[submodule "nextjs-inviteme"]
+	path = nextjs-inviteme
+	url = https://github.com/valmojr/nextjs-inviteme.git

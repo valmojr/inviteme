@@ -1,0 +1,37 @@
+services:
+  frontend:
+    container_name: inviteme-frontend
+    build: ./nextjs-inviteme
+    volumes:
+      - ./nextjs-inviteme:/app
+    depends_on:
+      - database
+    network_mode: host
+
+  backend:
+    container_name: inviteme-backend
+    build: ./nestjs-inviteme
+    volumes:
+      - ./nestjs-inviteme:/app
+    environment:
+      POSTGRES_DB: inviteme_db
+      POSTGRES_USER: inviteme_user
+      POSTGRES_PASSWORD: inviteme_password
+    depends_on:
+      - database
+    network_mode: host
+
+  database:
+    image: postgres:latest
+    container_name: inviteme-database
+    restart: always
+    environment:
+      POSTGRES_DB: inviteme_db
+      POSTGRES_USER: inviteme_user
+      POSTGRES_PASSWORD: inviteme_password
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    network_mode: host
+
+volumes:
+  postgres-data: {}

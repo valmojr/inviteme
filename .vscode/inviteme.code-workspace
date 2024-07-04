@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "nestjs-inviteme",
+			"path": "../nestjs-inviteme"
+		},
+		{
+			"name": ".next",
+			"path": "../nextjs-inviteme/.next"
+		},
+		{
+			"name": "types",
+			"path": "../nextjs-inviteme/.next/types"
+		},
+		{
+			"name": "nextjs-inviteme",
+			"path": "../nextjs-inviteme"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"inviteme",
+			".next",
+			"types"
+		]
+	}
+}
