@@ -1,7 +1,4 @@
 {
-  "jest.enable": false,
-  "cSpell.words": [
-    "avaliable",
-    "imgpath"
-  ]
+  "jest.jestCommandLine": "npx jest --watchAll",
+  "jest.rootPath": "nestjs-inviteme"
 }
